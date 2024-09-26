@@ -92,8 +92,23 @@ function resta(a, b) {
 } */
 const rest = (a,b) => a -b;
 
-const saludo = nombre => console.log("Hola " + nombre);
+// const saludo = nombre => console.log("Hola" + nombre);
+const saludo = nombre => {
+   return console.log("Hola " + nombre)
+};
 
 console.log( rest(4,7) ); // -3
 saludo("Azul"); // Hola Azul
 console.log( saludo("Daniela")/* Hola Daniela */ ); // undefined
+
+/*
+ - Realizar una arrow function que realice el área de un rectángulo (ladoA, ladoB)
+ - Realizar una arrow function que realice el área de un cuadrado (lado)
+*/
+
+const areaRectangulo = (a, b) => a * b;
+const areaCuadrado = (a) => a * a;
+
+// Template literals ` ` (backtick) en conjunto con la interpolación ${}
+const message = `El áre del rectángulo es ${areaRectangulo(5,8)} y del cuadrado ${areaCuadrado(8)}`; 
+console.log( message );
