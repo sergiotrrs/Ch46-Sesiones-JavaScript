@@ -161,7 +161,10 @@ imprimirMensaje("Presunto inocente", "paragraph" );
 /**
  * Imprimir mensaje usando callbacks
  */
-const imprimirMensajeUsandoCallBacks = ( mensaje, fncCallback )=> fncCallback(mensaje);
+const imprimirMensajeUsandoCallBacks = ( mensaje, fncCallback )=> fncCallback(mensaje); // "Sari"(mensaje)
 
 imprimirMensajeUsandoCallBacks("Alice in Borderland", imprimirEnParagraph );
 imprimirMensajeUsandoCallBacks("Alice in Borderland", imprimirEnConsola );
+
+imprimirMensajeUsandoCallBacks("Volver al futuro 1", function(mensaje){ console.warn("!"+mensaje) } );
+imprimirMensajeUsandoCallBacks("Volver al futuro 2", (mensaje)=> console.warn("!!"+mensaje) );
