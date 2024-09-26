@@ -42,8 +42,18 @@ sintaxis:
         instrucciones;
     };
 */
+// console.log( sum(2,5) ); // Uncaught ReferenceError: Cannot access 'sum' before initialization
 
 const sum = function sumatoria( a, b) {
     return a + b;
 }
 
+console.log( sum(2,5) ); // 7
+console.log( typeof sum ); // function
+
+/*
+  Ejercicio 1
+  - Realizar función declarada que realice la resta de dos números
+  - Realizar función expresa que realice la división de dos números
+  - Imprimir en consola el retorno de las dos funciones.
+*/
