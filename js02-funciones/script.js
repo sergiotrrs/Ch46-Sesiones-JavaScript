@@ -112,3 +112,56 @@ const areaCuadrado = (a) => a * a;
 // Template literals ` ` (backtick) en conjunto con la interpolación ${}
 const message = `El áre del rectángulo es ${areaRectangulo(5,8)} y del cuadrado ${areaCuadrado(8)}`; 
 console.log( message );
+
+/*
+ Investigar:
+  - Parámetros por defecto ( default parameters)
+  - Parámetros rest (rest parameters)
+*/
+
+
+/*
+ ------------ Funciones de Callback -----------------------
+ Es una función(definida, expresada, arrow, anónima) que se pasa 
+ a otra función como argumento.
+ Se pasa en el argumento como referencia ( sin parentesis).
+ */
+
+/** imprimir en consola */
+const imprimirEnConsola = mensaje => console.log( mensaje );
+
+/** imprimir en alert */
+const imprimirEnAlert = mensaje => alert(mensaje);
+
+/** imprimir en una paragraph en el HTML usando al API DOM */
+const imprimirEnParagraph = message => document.getElementById("message").innerHTML = message;
+
+/**
+ * función que imprime en consola, alert o paragraph.
+ */
+const imprimirMensaje = ( mensaje, tipoSalida ) => {
+    
+    if( tipoSalida === "consola" ){
+        imprimirEnConsola( mensaje );
+    } else if( tipoSalida === "alert" ){
+        imprimirEnAlert(mensaje);
+    } else if( tipoSalida === "paragraph"){
+        imprimirEnParagraph( mensaje );
+    } else {
+        console.error("La salida especificada no existe: " + tipoSalida);
+    }
+
+}
+
+imprimirMensaje("Ivanna recomienda Techno Boys", "consola" );
+// imprimirMensaje("Jhon Wick 1, 2, 3 y 4", "alert" );
+imprimirMensaje("Presunto inocente", "paragraph" );
+// imprimirMensaje("Matrix 1", "header1" );
+
+/**
+ * Imprimir mensaje usando callbacks
+ */
+const imprimirMensajeUsandoCallBacks = ( mensaje, fncCallback )=> fncCallback(mensaje);
+
+imprimirMensajeUsandoCallBacks("Alice in Borderland", imprimirEnParagraph );
+imprimirMensajeUsandoCallBacks("Alice in Borderland", imprimirEnConsola );
