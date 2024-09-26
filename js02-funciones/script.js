@@ -57,3 +57,43 @@ console.log( typeof sum ); // function
   - Realizar función expresa que realice la división de dos números
   - Imprimir en consola el retorno de las dos funciones.
 */
+const div = function division(a, b) {
+  return a / b;
+};
+
+function resta(a, b) {
+    return a - b;
+}
+
+console.log(div(10, 2));
+console.log(typeof div);
+console.log(resta(63, 15));
+
+
+/*
+ ------------ Funciones flecha -----------------------
+             (arrow functions)
+Funciones similares a las funciones expresadas pero:
+ - No requiere la palabra reservada function
+ - Si tiene una sola instrucción no requiere las llaves {}
+ - Si la instrucción es el mismo retorno, no requiere la palabra return
+
+sintaxis:
+    const nombreVariable = (parametros) => instrucción;
+
+    const nombreVariable = (parametros) => {
+        instrucción;
+        return expresión;
+    }
+*/
+/*
+function resta(a, b) {
+    return a - b;
+} */
+const rest = (a,b) => a -b;
+
+const saludo = nombre => console.log("Hola " + nombre);
+
+console.log( rest(4,7) ); // -3
+saludo("Azul"); // Hola Azul
+console.log( saludo("Daniela")/* Hola Daniela */ ); // undefined
