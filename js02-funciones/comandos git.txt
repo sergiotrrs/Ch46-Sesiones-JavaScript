@@ -79,3 +79,35 @@ branch 'main' set up to track 'origin/main'.
 TuX3@T3554 MINGW64 /c/generation/ch46/javascript (main)
 $ git push
 Everything up-to-date
+
+
+TuX3@T3554 MINGW64 /c/generation/ch46/javascript (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        js02-funciones/comandos git.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+TuX3@T3554 MINGW64 /c/generation/ch46/javascript (main)
+$ git add .
+
+TuX3@T3554 MINGW64 /c/generation/ch46/javascript (main)
+$ git commit -m "feat: comandos iniciales de git en el repo local"
+[main fcc7b90] feat: comandos iniciales de git en el repo local
+ 1 file changed, 81 insertions(+)
+ create mode 100644 js02-funciones/comandos git.txt
+
+TuX3@T3554 MINGW64 /c/generation/ch46/javascript (main)
+$ git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 1.13 KiB | 386.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:sergiotrrs/Ch46-Sesiones-JavaScript.git
+   4ac44c1..fcc7b90  main -> main
