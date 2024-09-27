@@ -210,3 +210,33 @@ function ejecutarOperacion(valorA, valorB, fncCallBackOperacion) {
 
 ejecutarOperacion(11, 6, sumar ); // 17
 ejecutarOperacion(11, 6, restar ); // 5
+ejecutarOperacion(11, 6, (a,b)=> a/b ) // 1.8333333333333333
+ejecutarOperacion(4, 3, (a,b)=> a**b ) // 64
+// ValorA residuo ValorB?
+ejecutarOperacion(4, 3, (a,b)=> a%b ) // 1
+
+
+
+/**
+ *  Cambiar atuendo a mi ternurín
+ * 
+ *  Realizar 3 funciones de cambio de atuendo:
+ *  - Función cambiarRapido(atuendo)
+ *    Enviar un mensaje a la consola que indique que el atuendo(nombre) se cambia en 2 minutos
+ * 
+ *  - Función cambiarConAccesorios(atuendo)
+ *   Enviar un mensaje a la consola que indique que el atuendo(nombre) se cambia en 5 minutos
+ *   e incluye accesorios
+ * 
+ *  - Función cambiarComplejo(atuendo)
+ *   Enviar un mensaje a la consola que indique que el atuendo(nombre) se cambia en 10 minutos
+ *   e incluye accesorios y muchos detalles.
+ * 
+ *  
+ *   Genera una función principal( cambiarAtuendo ) que reciba como parámetros:
+ *    > nombre: nombre del ternurín
+ *    > atuendo: ropa del turnirín 👮‍♀️👨‍🎓👩‍🏫👩‍🌾👩‍⚖️👩‍🍳👩‍🔧👩‍💼
+ *    > fncCallback: función para cambiar el atuendo
+ * 
+ *   Invocar la función cambiarAtuendo con los 3 tipos de atuendo: rapido, accesorios y complejo.
+ */
