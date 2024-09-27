@@ -241,8 +241,8 @@ ejecutarOperacion(4, 3, (a,b)=> a%b ) // 1
  *   Invocar la función cambiarAtuendo con los 3 tipos de atuendo: rapido, accesorios y complejo.
  */
 
-function cambiarRapido(atuendo) {
-  return `El atuendo ${atuendo} se cambia en 2 minutos`;
+function cambiarRapido(atuendo, nombre="mi ternurín") {
+  return `El atuendo ${atuendo} se cambia en 2 minutos para ${nombre}`;
 }
 
 function cambiarConAccesorio(atuendo) {
@@ -254,7 +254,7 @@ function cambiarComplejo(atuendo) {
 }
 
 const cambiarAtuendo = (nombre, atuendo, fncCallback) => {
-  const atuendoTernurin = fncCallback(atuendo);
+  const atuendoTernurin = fncCallback(atuendo, nombre);
   console.log(`Tu ternurin ${nombre} escogió ${atuendo} y ${atuendoTernurin}`);
 };
 
