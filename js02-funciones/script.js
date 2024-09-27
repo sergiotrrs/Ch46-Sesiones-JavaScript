@@ -168,3 +168,45 @@ imprimirMensajeUsandoCallBacks("Alice in Borderland", imprimirEnConsola );
 
 imprimirMensajeUsandoCallBacks("Volver al futuro 1", function(mensaje){ console.warn("!"+mensaje) } );
 imprimirMensajeUsandoCallBacks("Volver al futuro 2", (mensaje)=> console.warn("!!"+mensaje) );
+
+/*
+ Realizar una función (ejecutarOperacion) que pueda ejecutar operaciones matemáticas.
+ Inicialmente va a funcionar con sumar y restar.
+
+ La función "ejecutarOperacion" recibe como parámetros:
+   valorA: primer valor para la operación
+   valorB: segundo valor para la operación
+   fncCallBackOperacion: función de callback con la operación a realizar
+
+ La función "ejecutarOperación" debe realizar lo siguiente:
+ 
+ - Enviar un mensaje de Bienvenida
+ - Realizar la operación 
+ - Mostrar el resultado en la consola
+*/
+
+function sumar(a, b) {
+    return a + b;
+  }
+// const sumar = (a, b) => a + b;
+
+function restar(a, b) {
+    return a - b;
+  }
+  // const restar = (a, b) => a -b
+
+function ejecutarOperacion(valorA, valorB, fncCallBackOperacion) {
+    console.log("¡Bienvenida a CH46!");
+  
+    const resultado = fncCallBackOperacion(valorA, valorB);
+  
+    console.log(`El resultado de la operación es: ${resultado}`);
+  }
+/**
+ *  const ejecutarOperacion = (valorA, valorB, fncCallBackOperacion) => {
+ *    // cuerpo de la función
+ * }
+ */
+
+ejecutarOperacion(11, 6, sumar ); // 17
+ejecutarOperacion(11, 6, restar ); // 5
