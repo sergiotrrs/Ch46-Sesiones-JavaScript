@@ -107,3 +107,87 @@ console.log(pagoEfectuado( true ) );
 console.log(pagoEfectuado( false ) );
 console.log( pagoEfectudoConOperadorTernario(true) );
 console.log( pagoEfectudoConOperadorTernario(false) );
+
+
+//--------------- Condicional Switch --------------------------
+/*
+ La condicional Switch evalua una expresión y se compara
+ con el valor de cada instancia en 'case' y se ejecuta las
+ sentencias asociadas a ese 'case' hasta encontrar
+ la sentencia 'break' o se finalicen todas las sentencias
+ de la condicional switch.
+
+ Para comparar la condicional switch usa el operador estricto ===
+
+ Sintaxis:
+  switch (expresión) {
+    case valor1:
+        sentencia;
+        break;
+    case valor 2:
+        sentencias;
+        break;
+    case valor n:
+        sentencias;
+        break
+    default:
+        sentencias;
+        break;
+  }
+
+*/
+
+/**
+ *  Evaluar un nombre, de acuerdo al nombre enviar diferente saludo
+ */
+
+const saludarPersona = ( nombre ) =>{
+  let mensaje;
+
+  switch( nombre){
+    case "serch":
+        mensaje = "Qué transita por tus venas, aparte de colesterol y chocolate? 🍫🍩";
+        break;
+    case "ranfi":
+        mensaje = "gurs nais 🧟‍♀️";
+        break;
+    case "sari":     
+    case "eli":
+    case "vane":
+            mensaje = "Hola pelona 👩‍🦲";
+            break;
+    case "lizbeth":
+        mensaje = "Ola 🌊";
+        break;
+    case "azul":
+        mensaje = "Regresemos al 2014 Holiwis";
+        break;
+    default:
+        mensaje = "No podemos procesar un saludo para " + nombre;
+  }
+
+  return mensaje;
+}
+
+console.log( saludarPersona("serch") ); // Qué transita ...
+console.log( saludarPersona("ranfi") ); // gurs nais
+console.log( saludarPersona("sari") ); // Hola pelona
+console.log( saludarPersona("daniela") ); // No podemos procesar un saludo
+console.log( saludarPersona("eli") ); // Hola pelona
+console.log( saludarPersona("vane") ); // Hola pelona
+console.log( saludarPersona("azul") ); // Regresemos al 2014 Holiwis
+
+
+// ------------------- Ejercicio Estaciones del año --------------------------
+/*
+ Preguntar por el número de mes (prompt o DOM), del 1 al 12
+ Desplegar de acuerdo al mes un Alert (mostrarlo en el DOM) la estación del año.
+
+ mes 12,  1,  2 = invierno.
+ mes  3,  4,  5 = primavera
+ mes  6,  7,  8 = verano
+ mes  9, 10, 11 = otoño 
+
+ Realizar una versión con if-else-elseif y otra con switch.
+
+*/
