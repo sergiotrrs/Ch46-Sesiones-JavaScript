@@ -57,13 +57,18 @@ const evaluarTemperatura = (gradosCentigrados) => {
 
 const evaluarTemperatura = (gradosCentigrados) => {
     let mensaje = "";
-    
+
     if (gradosCentigrados === 24)
       mensaje = `Temperatura de ${gradosCentigrados} es ideal`;
     else if (gradosCentigrados >= 20 && gradosCentigrados <= 23)
       mensaje = `Temperatura de ${gradosCentigrados} es templada`;
-    else 
-      mensaje = `Temperatura de ${gradosCentigrados} no la puedo evaluar`;
+    else if (gradosCentigrados <= 19)
+      mensaje = `Temperatura de ${gradosCentigrados} es fria`;
+    else if (gradosCentigrados >= 25 && gradosCentigrados <= 30)
+      mensaje = `Temperatura de ${gradosCentigrados} es calida`;
+    else if (gradosCentigrados >= 31)
+      mensaje = `Temperatura de ${gradosCentigrados} es calurosa`;
+    else mensaje = `Temperatura de ${gradosCentigrados} no la puedo evaluar`;
 
     return mensaje;
   };
@@ -71,3 +76,34 @@ const evaluarTemperatura = (gradosCentigrados) => {
 console.log( evaluarTemperatura(22)  );
 console.log( evaluarTemperatura(24)  );
 console.log( evaluarTemperatura(30)  );
+console.log( evaluarTemperatura( "30") );
+
+// ------------------------ Operador ternario --------------------------
+/*
+ Es el único operador de JavaScript que tiene 3 operandos.
+ Generalmente se utiliza como opción a la sentencia if-else.
+
+ Sintaxis:
+  condición ? expresiónSiCondiciónEsVerdadera : expresionSiCondiciónEsFalsa; 
+
+*/
+/**
+ * Función que evalue si se ha pagado una tarjeta de crédito
+ * Parámetro de entrada: booleano que indique si se ha pagado la tarjeta de crédito
+ */
+const pagoEfectuado = ( esPagadoTC  ) => {
+    let mensaje = "";
+    if ( esPagadoTC )
+        mensaje = "Se ha pagado la tarjeta de crédito";
+    else
+        mensaje = "No se ha pagado, se te cobrará intereses";
+
+    return mensaje;
+}
+
+const pagoEfectudoConOperadorTernario = ( esPagadoTC ) => esPagadoTC === true ? "Tc pagado" : "Pagarás intereses"; 
+
+console.log(pagoEfectuado( true ) );
+console.log(pagoEfectuado( false ) );
+console.log( pagoEfectudoConOperadorTernario(true) );
+console.log( pagoEfectudoConOperadorTernario(false) );
