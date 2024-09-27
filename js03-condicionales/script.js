@@ -190,4 +190,8 @@ console.log( saludarPersona("azul") ); // Regresemos al 2014 Holiwis
 
  Realizar una versión con if-else-elseif y otra con switch.
 
+ Nota: recuerda que switch tiene verificación estricta,
+ por lo que necesitarás convetir de string a number
+ si tus cases son numéricos.
+
 */
