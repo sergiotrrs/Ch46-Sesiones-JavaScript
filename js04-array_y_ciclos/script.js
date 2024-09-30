@@ -232,5 +232,37 @@ const coloresPreferidos = colores.slice();
 coloresPreferidos.pop();
 coloresPreferidos.pop();
 coloresPreferidos.pop();
-console.log( coloresPreferidos );
-console.log( colores );
+console.log( coloresPreferidos ); // ['Amarillo']
+console.log( colores ); // ['Amarillo', 'Verde', 'Azul', 'Magenta']
+
+//***********************************************************
+// Iterar arreglos.
+
+const names = ["Sari", "Estefany", "Circe", "Ranfi"];
+
+// for (let index = 0; index < 4  ; index++ ) console.log( names[index] );
+
+/*for (let index = 0; index <= names.length-1  ; index++ ) { 
+  console.log( names[index] );
+}*/
+
+
+for (let index = 0; index < names.length  ; index++ ) { // bloque de código
+  console.log( names[index] );
+}
+
+// while( condición ) instrucción;
+/*
+let counter  = 0;
+while(  confirm("Deseas continuar?")  ){
+ counter ++;
+ console.log("Números de veces que has confirmado:" + counter);
+}
+console.log("Se ha terminado el ciclo while");
+*/
+
+const animales = ["León", "Cerdito", "Cabra", "Pony Salvaje"];
+
+// Imprimir en la consola el siguiente mensaje
+// "Hola amiguito <Nombre de animal>"
+// Realiza la iteración usando un ciclo for
