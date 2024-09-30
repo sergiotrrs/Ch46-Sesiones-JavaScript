@@ -201,3 +201,36 @@ stack.push("Plato 1");
 stack.push("Plato 2");
 stack.push("Plato 3");
 stack.pop(); // Plato 3
+
+// ==========================================================
+/**
+ * El pase de datos de los objetos es por referencia
+ * 
+ * El pase de datos por referencia significa que, en lugar de pasar 
+ * una copia del valor a una función o variable, se pasa una 
+ * referencia a la ubicación en memoria de los datos originales. 
+ * Esto implica que cualquier cambio realizado a los datos 
+ * dentro de la función afectará directamente al valor original.
+ * 
+ * */
+
+const colores = ["Amarillo", "Verde", "Azul"];
+const tema = colores; // Se pasa la referencia del arreglo en colores a tema
+// Cualquier modificación en tema, ocurrirá en colores.
+
+function agregarColor( array ){
+  array.push("Magenta");
+}
+
+agregarColor( tema );
+
+console.log( colores );
+console.log( tema );
+
+// Para copiay y clolar un arreglo a un nuevo arreglo se uesa slice()
+const coloresPreferidos = colores.slice();
+coloresPreferidos.pop();
+coloresPreferidos.pop();
+coloresPreferidos.pop();
+console.log( coloresPreferidos );
+console.log( colores );
