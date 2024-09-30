@@ -31,3 +31,22 @@ const numeros = [9]; // [9]
 const numbers = new Array(9); // [ , , , , , , , , ]
 console.log( numeros );
 console.log( numbers );
+
+// Acceder a los elementos. =======================================
+const nombres = ["Estefany", "América", "Karen", "Lorena"];
+
+// Los arrays son zero index ( el primer elemento es índice cero ).
+console.log( nombres[0] ); // "Estefany"
+console.log( nombres[2] ); // "Karen"
+
+// Modificar un elementos del arreglo.
+console.log( nombres ); // "Estefany", "América", "Karen", "Lorena"
+nombres[2] = "Andrea";
+console.log( nombres ); // "Estefany", "América", "Andrea", "Lorena"
+
+// el dato string es un dato inmutable;
+let nombreMascota = "Steve";
+console.log( nombreMascota[1] ); // t
+console.log( nombreMascota ); // Steve
+nombreMascota[1] = "x"; // NO se puede cambiar por que es un string es un dato inmutable
+console.log( nombreMascota ); // Steve
