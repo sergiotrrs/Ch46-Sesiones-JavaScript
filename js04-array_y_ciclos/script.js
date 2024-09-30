@@ -266,3 +266,35 @@ const animales = ["León", "Cerdito", "Cabra", "Pony Salvaje"];
 // Imprimir en la consola el siguiente mensaje
 // "Hola amiguito <Nombre de animal>"
 // Realiza la iteración usando un ciclo for
+for (let index = 0; index < animales.length; index++) {
+  const element = animales[index];
+  console.log("Hola Amiguito " + element); 
+}
+
+let indice = 0;
+while( indice < animales.length ){
+  const element = animales[indice];
+  console.log("Hola amiguis " + element); 
+  indice++;
+}
+
+// ----------------------- Uso de for... of ------------------
+/* Ejecuta una sentencia por cada elemento de un objeto iterable(array, colección, string).
+Sintaxis:
+    for (const iterator of object) {
+    
+    }
+*/
+
+for (const animal of animales ){
+  console.log("Hola animalito " + animal);
+}
+
+// ------------------- Uso de break en ciclos ----------------------------
+// break detiene la ejecución de la iteración en curso y termina el ciclo.
+
+for (const animal of animales ){
+  if( animal === "Cerdito") break;
+  console.log("Hola  " + animal);
+  console.log("Holi  " + animal);
+}
