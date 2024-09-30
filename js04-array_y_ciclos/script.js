@@ -161,5 +161,43 @@ console.log( frutas ); // ['🍓', '🥝', '🍌', '🥥', '🍒']
  * - Comprar piña ( ponerla entre el coco y banana) '🍍'
  * - Comprar fresa (al último, después de la banana) '🍓'
  * - Comprar sandía (poner al fondo, antes del coco) '🍉'
+ * - imprimir el resultado ['🍉', '🥥', '🍍', '🍌', '🍓' ]
  */
+const fruits = [];
+fruits.push("🥥");
+fruits.push("🍌");
+fruits.splice(1, 0, "🍍");
+fruits.push("🍓");
+fruits.unshift("🍉");
+console.log(fruits); // ['🍉', '🥥', '🍍', '🍌', '🍓' ]
 
+/**
+ *  PEPS: Primeras entradas, primeras salidas 
+ *  FIFO: First in, First out
+ *  QUEUE: colas
+ * 
+ *  Usos:
+ *   - Colas de impresión, se imprimen los trabajor en el orden que fueron recibidos
+ *   - Buffer de datos: transmisión de audio y video
+ *   - Manejo de solicitudes en servidores
+ * 
+ */
+const queue = [];
+queue.push("Elemento 1");
+queue.push("Elemento 2");
+queue.shift(); // "Elemento 1"
+
+/**
+ *  UEPS: Últimas entradas, primeras salidas
+ *  LIFO: Last in, First Out
+ *  Stack: pila
+ * 
+ *  Usos:
+ *    - Llamadas a funciones recursivas (pila de ejecusión)
+ *    - Deshacer/rehacer acciones en aplicaciones
+ */
+const stack = [];
+stack.push("Plato 1");
+stack.push("Plato 2");
+stack.push("Plato 3");
+stack.pop(); // Plato 3
