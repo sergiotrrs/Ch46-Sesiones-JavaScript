@@ -54,4 +54,101 @@ console.log( nombreMascota ); // Steve
 // Obtener el número de elementos de un arreglo: propiedad length
 console.log( nombres.length ); // 4
 console.log( [1,2,3].length ); // 3
+console.log( nombres.lenght ); // undefined
+
+// El último elemento del arreglo se puede obtener con [ nameArray.length -1 ]
+// Obtener el último elemento de la variable nombres: "Lorena"
+console.log( nombres[nombres.length-1] ); // "Lorena"
+const cohortes = ["Ch46", "Ch47", "Ch48"];
+// Obtener el nombre de la última cohorte
+console.log(cohortes[cohortes.length-1]); // Ch48
+// Si tratamos de acceder a un elemento que no exista
+// JS devuelve undefined
+console.log( cohortes[10] ); // undefined
+
+//================ Métodos comunes de los arreglos =================
+
+/**
+ *  Index Of
+ * 
+ *  Retorna el primer índice en el que se puede encontrar un elemento
+ * en el arreglo.
+ * 
+ * Si el elemento buscado no se encuentra, retorna -1.
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
+ */
+
+console.log( nombres ); // ['Estefany', 'América', 'Andrea', 'Lorena']
+console.log( nombres.indexOf("Andrea") ); // 2
+console.log( nombres.indexOf("Karina") ); // -1
+// Agregar a Sara (Sara Abigail)
+// nombres[4]= "Sara";
+nombres[nombres.length] = "Sara"; 
+console.log( nombres ); // ['Estefany', 'América', 'Andrea', 'Lorena', 'Sara']
+// Agregar a "Sara" (Sara Vergara)
+nombres[nombres.length] = "Sara";
+console.log( nombres ); // ['Estefany', 'América', 'Andrea', 'Lorena', 'Sara', 'Sara']
+
+console.log( nombres.indexOf("Sara") ); // 4
+console.log( nombres.indexOf("Sara", 5) ); // 5
+
+/**
+ *  push()
+ * 
+ *  Añade elementos al final del arreglo
+ *
+ * */ 
+const frutas = ["🍍", "🍎", "🍐"];
+console.log( frutas );
+
+// Agregamos cereza y durazno
+frutas.push("🍒", "🍑");
+console.log( frutas ); // ['🍍', '🍎', '🍐', '🍒', '🍑']
+
+/**
+ *  unshift()
+ * 
+ *  Añade elementos al inicio del arreglo
+ */
+
+// Agregar  sandía y fresa
+frutas.unshift("🍉", "🍓");
+console.log( frutas ); // ['🍉', '🍓', '🍍', '🍎', '🍐', '🍒', '🍑']
+
+/**
+ *  pop()
+ * 
+ *  Eliminar el último elemento del arreglo
+ */
+console.log( frutas.pop() ); // '🍑'
+console.log( frutas ); // ['🍉', '🍓', '🍍', '🍎', '🍐', '🍒']
+
+/**
+ *  shift()
+ * 
+ *  Eliminar el primer elemento del arreglo
+ * 
+ */
+console.log( frutas.shift() ); // '🍉'
+console.log( frutas ); // ['🍓', '🍍', '🍎', '🍐', '🍒']
+
+/**
+ * splice()
+ * 
+ *  Elimina elementos de un arreglo.
+ *  Retorna los elementos eliminados y modifica el arreglo original.
+ *  Es posible añadir nuevos elementos en la posición que se ha eliminado.
+ */
+
+// Eliminar manzana y pera
+console.log( frutas.splice(2, 2 )  ); // ['🍎', '🍐'];
+console.log( frutas ); // ['🍓', '🍍', '🍒']
+
+// Eliminar la piña y agregar kiwi y coco
+console.log( frutas.splice(1, 1, "🥝", "🥥") ); // ['🍍']
+console.log( frutas ); ['🍓', '🥝', '🥥', '🍒'];
+
+// Agregar banana entre kiwi y coco
+console.log( frutas.splice(2, 0, "🍌") ); // []
+console.log( frutas ); // ['🍓', '🥝', '🍌', '🥥', '🍒']
 
