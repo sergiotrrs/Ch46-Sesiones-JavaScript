@@ -152,3 +152,14 @@ console.log( frutas ); ['🍓', '🥝', '🥥', '🍒'];
 console.log( frutas.splice(2, 0, "🍌") ); // []
 console.log( frutas ); // ['🍓', '🥝', '🍌', '🥥', '🍒']
 
+/**
+ * Ejercicio ir a martes de frutas y verduras
+ * 
+ * - Comenzar con cesta vacía
+ * - Comprar coco '🥥'
+ * - Comprar banana '🍌'
+ * - Comprar piña ( ponerla entre el coco y banana) '🍍'
+ * - Comprar fresa (al último, después de la banana) '🍓'
+ * - Comprar sandía (poner al fondo, antes del coco) '🍉'
+ */
+
