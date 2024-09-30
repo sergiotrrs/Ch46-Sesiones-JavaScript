@@ -50,3 +50,8 @@ console.log( nombreMascota[1] ); // t
 console.log( nombreMascota ); // Steve
 nombreMascota[1] = "x"; // NO se puede cambiar por que es un string es un dato inmutable
 console.log( nombreMascota ); // Steve
+
+// Obtener el número de elementos de un arreglo: propiedad length
+console.log( nombres.length ); // 4
+console.log( [1,2,3].length ); // 3
+
