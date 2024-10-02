@@ -351,3 +351,32 @@ refCategorias.innerHTML = stringListItems;
  - Se puede mostrar como una <ul>
  * Forma difícil, pro-max, nivel super Sayajin fase 3: mostrar como cards
 */
+
+const productosGecko = ["Sustrato", "Calcio con vitaminas", "Gusanos", "Agua", "Placa térmica", "Volcán"];
+console.table(productosGecko);
+
+// const listProductosGecko = productosGecko.map((producto) => `<li>${producto}</li>`);
+const listProductosGecko = productosGecko.map((producto) => `
+  <div class="col-6 col-md-4 mt-4">
+    <div class="card" >
+      <div class="card-body">
+        <h5 class="card-title">${producto}</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+  </div>
+
+`);
+
+
+console.table(listProductosGecko);
+
+const refProductosGecko = document.getElementById("productos");
+
+const stringProductosGecko = listProductosGecko.join(" ");
+console.log(stringProductosGecko);
+
+refProductosGecko.innerHTML = stringProductosGecko;
