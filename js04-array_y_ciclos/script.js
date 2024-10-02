@@ -335,4 +335,19 @@ console.table( listItems );
 const refCategorias = document.getElementById("categorias");
 console.log(refCategorias.innerHTML);
 
-refCategorias.innerHTML = listItems;
+const stringListItems = listItems.join("");
+console.log( stringListItems );
+
+refCategorias.innerHTML = stringListItems;
+
+/*
+  [1 , 2 , 3 , 60 ] convertir a string -> 1,2,3,60
+*/
+
+/*
+ Realizar un arreglo de productos, que tenga 5 productos para Geckos.
+
+ Mostrar en la interfaz de usuario los productos.
+ - Se puede mostrar como una <ul>
+ * Forma difícil, pro-max, nivel super Sayajin fase 3: mostrar como cards
+*/
