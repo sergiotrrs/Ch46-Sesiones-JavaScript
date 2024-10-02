@@ -298,3 +298,41 @@ for (const animal of animales ){
   console.log("Hola  " + animal);
   console.log("Holi  " + animal);
 }
+
+// ---------------- forEach -------------------------
+/*
+ Método que se utiliza para iterar colecciones, arreglos.
+ Permite ejecutar una función de callback por cada elemento del arreglo.
+
+*/
+
+
+const imprimirDato = (element, index, array ) => console.log(element, index, array);
+
+const saboresHelados = ["Cereza", "Choco chips", "Oreo", "Leche Quemada", "Napolitano"];
+
+// saboresHelados.forEach( imprimirDato );
+saboresHelados.forEach( ( helado )=> console.warn("Helado: " + helado) );
+
+/*
+ Método map()
+ Permite transformar cada elemento de un array y devolver un nuevo array 
+ con los resultados. No modifica el array original.
+
+*/
+
+const categorias = ["Skincare", "Sueros", "Maquillaje", "Cremas", "Shampoo"];
+console.table( categorias );
+/*
+const listItems = categorias.map( (categoria)=> {
+  return `<li> ${categoria} </li>`
+}    );
+    */
+
+const listItems = categorias.map( (categoria)=> `<li> ${categoria} </li>` );
+console.table( listItems );
+
+const refCategorias = document.getElementById("categorias");
+console.log(refCategorias.innerHTML);
+
+refCategorias.innerHTML = listItems;
