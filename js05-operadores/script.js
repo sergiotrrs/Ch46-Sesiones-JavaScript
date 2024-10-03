@@ -57,15 +57,11 @@ const verificarUltimoDigitoUsandoResiduo = (numA, numB, numC) =>{
   return result;
 }
 
-
 console.log(verificarUltimoDigitoUsandoString( 1098, 78, 8 ) ); // true
 console.log(verificarUltimoDigitoUsandoString( 77, 6, 23 ) ); // false
 
 console.log(verificarUltimoDigitoUsandoResiduo( 1098, 78, 8 ) ); // true
 console.log(verificarUltimoDigitoUsandoResiduo( 77, 6, 23 ) ); // false
-
-
-
 
 // Uso de rest parameters ( ...restParameters )
 const verificarUltimoDigitoDeVariosNumeros = ( name, ...numeros  ) =>{
@@ -75,3 +71,20 @@ const verificarUltimoDigitoDeVariosNumeros = ( name, ...numeros  ) =>{
 console.log( verificarUltimoDigitoDeVariosNumeros("Eli", 2, 22 ) ); // true
 console.log( verificarUltimoDigitoDeVariosNumeros("Eli", 2, 22, 52 ) ); // true
 console.log( verificarUltimoDigitoDeVariosNumeros("Eli", 2, 22, 52, 44 ) ); // false
+
+// Saber si un año es bisiesto, verificar solo si es divisible entre 4
+// Ejemplo: 2024 fue bisiesto, febrero tuvo 29 días
+//          2023 no fue bisiesto
+//          2020 fue bisiesto
+
+/*
+const isLeapYear = ( year ) => {
+  const theChosenYear = year % 4;
+  return theChosenYear === 0;
+} */
+
+const isLeapYear = ( year ) => year % 4 === 0;
+
+console.log( isLeapYear(2024) ); // true
+console.log( isLeapYear(2023) ); // false
+console.log( isLeapYear(2020) ); // true
