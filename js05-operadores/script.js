@@ -170,3 +170,22 @@ console.log( 3 * Number("4") ); // 3 * 4 = 12
 console.log( 3 * "10-2" ); // 3 * NaN = NaN
 console.log( 3 * parseInt("10-2") ); // 3 * 10 = 30
 
+// Conversión a booleano
+// En la conversión de boolean los siguientes valores son false:
+// "", 0, null, undefined
+console.log( Boolean(1) ); //true
+console.log( Boolean(1000) ); //true
+console.log( Boolean(-1000) ); //true
+console.log( Boolean("Ya mero nos vamos a comer, me duele la cabeza") ); // true
+console.log( Boolean("") ); // false
+console.log( Boolean(" ") ); // true por que hay un espacio
+
+// Number
+// [] -> 0 , [30] -> 30, [30,33] -> NaN, false -> 0, true -> 1
+console.log(  Number( [] ), Number( [30]), Number([30,33]) ); // 0 , 30 , NaN
+
+// String
+// [] -> "" , [12,2] -> "12,2", function(){} -> "funtion(){}", {} -> [object, object]
+console.log( String( [] ), String( [12,2] ) ); // "", 12,2
+console.log( String({name:"sergio", job:"instructor" } ) ); // [object Object]
+console.log( JSON.stringify({name:"sergio", job:"instructor" } ) ); // {"name":"sergio", "job":"instructor" }
