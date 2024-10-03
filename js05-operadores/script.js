@@ -88,3 +88,21 @@ const isLeapYear = ( year ) => year % 4 === 0;
 console.log( isLeapYear(2024) ); // true
 console.log( isLeapYear(2023) ); // false
 console.log( isLeapYear(2020) ); // true
+
+//  Ejercios para aplicar la precedencia de operadores:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table
+
+console.log(  3 * 2 / 2  ); // 3
+
+console.log(  3 / 2 * 2  ); // 3
+
+console.log(  2 * 4 / 2**3 ); // 2 * 4 / (2^3) =   8 / 8 = 1
+
+console.log(  3 ** 2 ** 3  ); // 3^( 2^3 ) = 3^8 = 6561
+
+console.log( 20 / 4 + 3 * (2 + 3) - 4 ** 2 ); //  4
+        //   20 / 4 + 3 *    5    -   16
+        //      5   +    15       -   16
+        //         20             -   16
+        //                        4
+      
