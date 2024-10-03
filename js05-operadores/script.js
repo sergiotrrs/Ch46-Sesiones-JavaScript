@@ -106,3 +106,67 @@ console.log( 20 / 4 + 3 * (2 + 3) - 4 ** 2 ); //  4
         //         20             -   16
         //                        4
       
+// ------- Operadores de asignación ----------------
+/*
+ Asigna un valor a su operador izquierdo basándose en el valor
+ de su operando derecho:
+
+ asignación =
+ 
+ Operadores abreviados ( compuestos ):
+  op1 += op2  -> op1 = op1 + op2
+  op1 -= op2  -> op1 = op1 - op2
+  op1 *= op2  -> op1 = op1 * op2
+
+*/
+let age = 16;
+
+// Agregar  4 a la variable age y almacenar el resultado en 'age'
+// age = age + 4; 
+age += 4; // age = 20
+
+age *= 2 / 2 + 3; // 80
+
+age -= 40 / 2 * 3; // 20
+
+// -------------- Operadores unarios ------------------
+// Solo actuan sobre un operando
+// Negación unaria
+let edad = -age; // -20
+let almaEdad = -edad; // 20
+
+// suma unaria
+const dinero = -100;
+let pago = + dinero;
+console.log( dinero, pago);
+
+const money = "100.5";
+// const amount = money + 500; // 100.5500
+// const amount = parseInt(money) + 500; // 600
+const amount = parseFloat(money) + 500; // 600.5
+// const amount = Number(money) + 500; // 600.5
+// const amount = +money + 500; // 600.5
+
+console.log( amount );
+
+
+// Diferencias entre usar Number() y parseInt()
+// - Number convierte enteros y decimales
+// - parseInt convierte solo la parte entera
+console.log( parseInt("10.456")); // 10
+// - Number devuelve NaN si la cadena contiene algún caracter no numérico
+// - parseInt convierte los enteros hasta encontrar una caracter no numérico
+//       Si la entrada no comienza con un valor numérico, devuelve NaN
+console.log( parseInt("10-25") ); // 10
+console.log( Number("10-25") ); // NaN
+
+console.log( Number( true ) ); // 1
+console.log( Number( false ) ); // 0
+console.log( parseInt( true ) ); // NaN
+
+console.log( 3 * "4" ); // 3 * 4 = 12
+console.log( 3 * Number("4") ); // 3 * 4 = 12
+
+console.log( 3 * "10-2" ); // 3 * NaN = NaN
+console.log( 3 * parseInt("10-2") ); // 3 * 10 = 30
+
