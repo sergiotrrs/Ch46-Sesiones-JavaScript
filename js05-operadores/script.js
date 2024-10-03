@@ -189,3 +189,47 @@ console.log(  Number( [] ), Number( [30]), Number([30,33]) ); // 0 , 30 , NaN
 console.log( String( [] ), String( [12,2] ) ); // "", 12,2
 console.log( String({name:"sergio", job:"instructor" } ) ); // [object Object]
 console.log( JSON.stringify({name:"sergio", job:"instructor" } ) ); // {"name":"sergio", "job":"instructor" }
+
+
+// Operador de incremento y decremento en unidad.
+/*
+  Operador de pre-incremento y pre-decremento
+    ++ valor
+    -- valor
+
+  Operador de post-incremento y post-decremento
+    valor ++
+    valor --
+
+*/
+let x = 10;
+x++; // x = x + 1;
+console.log( x ); // 11
+
+let y = 30;
+++y; // y = y + 1;
+console.log( y ); // 31
+
+// =========
+let valorA = 10;
+let valorB = 10;
+
+// Primero se entrega el valor y después(POST) se incrementa la variable
+console.log( valorA++ ); // 10
+                         // valorA = 11
+/*
+console.log( valorA);
+valorA = valorA + 1;
+*/
+
+// Primero se incrementa(PRE) y luego se entrega el valor                         
+console.log( ++valorB ); // 11
+
+/*
+ valorB = valorB + 1;
+ console.log( valorB );
+*/
+
+let valorC = 5;
+console.log(  5 + valorC ++ ); // 10
+console.log( valorC ); // 6
