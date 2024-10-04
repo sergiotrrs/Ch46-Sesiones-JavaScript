@@ -256,3 +256,21 @@ console.log("Me volvió a dar hambre y volví a comer, ahora tiene: " + --medida
 console.log("Lo revisé después y tiene la medida de: " + medidaCereal); // 28
 
 
+// =========================================================
+
+// NO se debe hacer let a = b = 0;
+// let a = 0, b = 0;
+let a = 0;
+let b = 0;
+
+               // b = a
+               // a = a + 1;
+for(  ; a < 3 ; b = a++ ){
+  console.log( a, b); 
+         //   0 , 0
+         //   1 , 0
+         //   2 , 1
+}
+
+console.log( a, b); // a = 3 , b = 2   
+
