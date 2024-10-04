@@ -1,7 +1,25 @@
 console.log("Sesión JS06 - DOM");
 
 /**
- *  Cambiar el contenido de un elemento HTML por medio de su ID
+  Cambiar el contenido de un elemento HTML por medio de su ID
+  
+  Las principales diferencias entre innerHTML y textContent son:
+
+  Contenido interpretado:
+     innerHTML: Inserta y retorna el contenido HTML, interpretando 
+      las etiquetas y creando elementos.
+     textContent: Inserta y retorna solo el texto, sin interpretar 
+      ni procesar etiquetas HTML.       
+   
+  Seguridad:
+     innerHTML: Es vulnerable a ataques XSS si no se valida 
+      adecuadamente el contenido.
+     textContent: Es más seguro, ya que trata todo el contenido 
+      como texto, sin ejecutar código HTML o scripts.
+
+  Rendimiento:
+    innerHTML: Puede ser más lento si el contenido HTML tiene que ser reanalizado o renderizado.
+    textContent: Es más rápido ya que solo maneja texto plano.
  */
 const changeElementById = (idName, newMessage) => {
   const refElement = document.getElementById(idName);
@@ -9,6 +27,10 @@ const changeElementById = (idName, newMessage) => {
   console.log(refElement);
 
   // refElement.textContent = 
+
+  /*
+    
+  */
   refElement.innerHTML  = newMessage;
 
 };
