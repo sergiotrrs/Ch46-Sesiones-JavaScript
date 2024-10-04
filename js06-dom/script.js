@@ -68,3 +68,22 @@ const changeElementsByQuerySelector = () => {
 }
 
 changeElementsByQuerySelector();
+
+// ------------------ Propiedades de visualización ---------------
+// display : none (quitar el elemento del DOM)
+// visibility: hidden (ocultar el elemento)
+
+const displayNone = () => {
+  const element = document.querySelector("#subtitle");
+  element.style.display = "none"; // quitar el elemento
+  // element.style.display = "inline"; // mostrar "inline", "block"
+}
+
+const hiddenElement = () => {
+  const element = document.querySelector("#second-list-item");
+  element.style.visibility = "hidden";
+  // element.style.visibility = "visible"; // mostrar el elemento
+}
+
+displayNone();
+hiddenElement();
