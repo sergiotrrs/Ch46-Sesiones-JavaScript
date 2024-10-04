@@ -233,3 +233,26 @@ console.log( ++valorB ); // 11
 let valorC = 5;
 console.log(  5 + valorC ++ ); // 10
 console.log( valorC ); // 6
+
+// ====================================================
+
+let diaSemana = 5;
+
+console.log("El día de hoy es el n." + ++diaSemana ); // 6
+                         // diaSemana = diaSemana + 1
+                         // console.log("El día..." + diaSemana );
+console.log("Mañana será el n.: " + diaSemana ); // 6
+
+// =======================================================
+
+let medidaCereal = 30;
+
+console.log("Me comí un puñito de Cereal, ahora tiene: " + --medidaCereal ); // 29
+                                                    // medidaCereal = medidaCereal -1 //29
+                                                    // console.log("Me comí.." + medidaCereal) // 29
+console.log("Me volvió a dar hambre y volví a comer, ahora tiene: " + --medidaCereal); // 28
+                                                    // medidaCereal = medidaCereal -1 // 28
+                                                    // console.log("Me volvió.." + medidaCereal) // 28
+console.log("Lo revisé después y tiene la medida de: " + medidaCereal); // 28
+
+
