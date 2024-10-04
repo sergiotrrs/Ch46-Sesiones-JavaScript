@@ -35,3 +35,20 @@ changeElementById("title", "Es tan fetch la sesión");
 
 // Ejercicio: Modifica el texto del h2 a "Get in loser we're going shopping!"
 changeElementById("subtitle", "Get in loser we're going <em>shopping!</em>" );
+
+
+/**
+ * Modificar elementos por su tag(etiqueta HTML)
+ */
+const changeElementsByTagName = () =>{
+  // Obteniendo la referencia de los <li></li>
+  const listItems = document.getElementsByTagName("li");
+  console.log( listItems );
+
+  for (let index = 0; index < listItems.length; index++) {    
+    listItems[index].textContent = `Soy el índice ${index} `;
+  }
+
+}
+
+changeElementsByTagName();
