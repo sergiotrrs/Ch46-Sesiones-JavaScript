@@ -52,3 +52,19 @@ const changeElementsByTagName = () =>{
 }
 
 changeElementsByTagName();
+
+/**
+ * Modificar un elemento usando el selector universar
+ */
+const changeElementsByQuerySelector = () => {
+  // const element = document.querySelector( "img" );
+  const element = document.querySelector( "#logo" );
+  
+  console.log( element.src ); // Leer la ruta de la imagen
+  console.log( element.alt ); // Leer el contenido de alt
+  element.src = "./assets/img/copito-antonio.jpg";
+  element.alt = "Gato Copito Antonio tomándose una selfie";
+
+}
+
+changeElementsByQuerySelector();
