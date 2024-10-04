@@ -26,11 +26,7 @@ const changeElementById = (idName, newMessage) => {
   // const refElement = document.getElementById("title");
   console.log(refElement);
 
-  // refElement.textContent = 
-
-  /*
-    
-  */
+  //refElement.textContent = newMessage;
   refElement.innerHTML  = newMessage;
 
 };
@@ -38,4 +34,4 @@ const changeElementById = (idName, newMessage) => {
 changeElementById("title", "Es tan fetch la sesión");
 
 // Ejercicio: Modifica el texto del h2 a "Get in loser we're going shopping!"
-
+changeElementById("subtitle", "Get in loser we're going <em>shopping!</em>" );
