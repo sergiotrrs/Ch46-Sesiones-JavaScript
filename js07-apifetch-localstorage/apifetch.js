@@ -59,8 +59,19 @@ const datosDelProducto = () =>{
         .finally( callbackParaFinally );
 }
 
-datosDelProducto();
+// datosDelProducto();
 
+const datosDelProductoRefactorizado = ( url ) =>{
+    fetch( url )
+     .then(  (resolve)=> resolve.json()  )
+     .then(  (objProduct) => console.table( objProduct) )
+     .catch( (error) => console.error(error))
+     .finally( ()=> console.log("He terminado") )
+
+}
+
+datosDelProductoRefactorizado("./assets/json/lego-chef.json");
+datosDelProductoRefactorizado("./assets/json/productos.json");
 
 
 
