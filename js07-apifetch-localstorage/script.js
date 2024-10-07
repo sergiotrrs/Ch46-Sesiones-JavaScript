@@ -68,7 +68,31 @@ const segundoPasoAsincrono = () => {
   setTimeout( cambiarImagen , 5000 , "copito-antonio.jpg", "Copito antonio con lentes" );
 }
 
-
 primerPaso();
 segundoPasoAsincrono();
 tercerPaso();
+
+// ------------------------- setInterval ------------------------
+// Ejecuta una función de manera reiterada con un tiempo de retardo fijo
+
+let indiceSaludo = 0;
+
+const carrouselDeSaludo = () => {
+ const saludos = ["Hola", "Bonjour", "Holi", "Ni Hao", "Kon'nichiwa"];
+ const title = document.querySelector("#title");
+ title.textContent = saludos[ indiceSaludo];
+ 
+ indiceSaludo++;
+ if( !(indiceSaludo < saludos.length) ) indiceSaludo = 0;
+
+}
+
+// carrouselDeSaludo( indiceSaludo);
+
+const cambiarSaludo = () => {
+  const refInterval = setInterval( carrouselDeSaludo, 4000);
+  setTimeout( ()=> clearInterval( refInterval), 28_000 );
+}
+
+cambiarSaludo();
+
