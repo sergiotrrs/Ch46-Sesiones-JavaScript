@@ -64,14 +64,17 @@ const datosDelProducto = () =>{
 const datosDelProductoRefactorizado = ( url ) =>{
     fetch( url )
      .then(  (resolve)=> resolve.json()  )
-     .then(  (objProduct) => console.table( objProduct) )
+     .then(  (objProduct) => console.table( objProduct.data ) )
      .catch( (error) => console.error(error))
      .finally( ()=> console.log("He terminado") )
 
 }
 
-datosDelProductoRefactorizado("./assets/json/lego-chef.json");
-datosDelProductoRefactorizado("./assets/json/productos.json");
+// datosDelProductoRefactorizado("./assets/json/lego-chef.json");
+// datosDelProductoRefactorizado("./assets/json/productos.json");
+// datosDelProductoRefactorizado("https://rickandmortyapi.com/api/character"); //  id 1-20 Acceder al array en .results
+// datosDelProductoRefactorizado("https://rickandmortyapi.com/api/character?page=2"); // id 21-40
+datosDelProductoRefactorizado("https://reqres.in/api/users?page=2"); // accdeder al array en .data
 
 
 
