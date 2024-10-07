@@ -37,6 +37,10 @@ const datosDelProducto = () =>{
 
     const callbackParaThen = ( valorDeResolved ) => {
         console.log( valorDeResolved );
+        // Devuelve una promesa, convertir de json a object
+        valorDeResolved.json()
+            .then( producto => console.log(producto)  )
+            .catch( error => console.log(error) )
     }
 
     const callbackParaError = ( valorDeRejected) => {
@@ -50,6 +54,7 @@ const datosDelProducto = () =>{
     // fetch( url ).then().catch().finally();
     fetch( url )
         .then( callbackParaThen )
+              
         .catch( callbackParaError )
         .finally( callbackParaFinally );
 }
