@@ -9,7 +9,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body class="bg-dark">
+<body class="bg-dark text-light">
 
     <!-- Encabezado -->
     <header class="text-warning text-center my-3">
@@ -21,12 +21,19 @@
         <section class="container">
             <div class="row justify-content-center">
                 <!-- Descripción de la sesión -->
-                <div class="col-12 col-md-8  text-light">
+                <div class="col-12 col-md-8  ">
                     <h2 id="subtitle">Local Storage</h2>
                     <p>El Local Storage es una API de almacenamiento del navegador que permite guardar datos de manera
                         persistente en el cliente (navegador) sin fecha de expiración. Esto significa que los datos
                         permanecen incluso después de cerrar el navegador, a menos que el usuario los borre manualmente.
                     </p>
+                    <h3>Métodos principales</h3>
+                    <ul>
+                        <li><code>localStorage.setItem('clave', 'valor')</code>: Guarda un valor.</li>
+                        <li><code>localStorage.getItem('clave')</code>: Recupera un valor.</li>
+                        <li><code>localStorage.removeItem('clave')</code>: Elimina un ítem específico.</li>
+                        <li><code>localStorage.clear()</code>: Elimina todos los ítems guardados.</li>
+                    </ul>
                 </div>
 
                 <!-- Imagen de decoración -->
