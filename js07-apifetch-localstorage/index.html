@@ -20,8 +20,8 @@
     <main>
         <section class="container">
             <div class="row justify-content-center">
-                <!-- Descripción de la sesión -->
-                <div class="col-12 col-md-8  ">
+                <!-- Local Storage -->
+                <div class="col-12 col-md-4  ">
                     <h2 id="subtitle">Local Storage</h2>
                     <p>El Local Storage es una API de almacenamiento del navegador que permite guardar datos de manera
                         persistente en el cliente (navegador) sin fecha de expiración. Esto significa que los datos
@@ -33,6 +33,18 @@
                         <li><code>localStorage.getItem('clave')</code>: Recupera un valor.</li>
                         <li><code>localStorage.removeItem('clave')</code>: Elimina un ítem específico.</li>
                         <li><code>localStorage.clear()</code>: Elimina todos los ítems guardados.</li>
+                    </ul>
+                </div>
+                <!-- API FETCH -->
+                <div class="col-12 col-md-4  ">
+                    <h2 id="subtitle">Api Fetch</h2>
+                    <p>La API fetch es una herramienta de JavaScript para realizar solicitudes HTTP asíncronas, que
+                        permite obtener datos de servidores o enviar información sin recargar la página.
+                    </p>
+                    <h3>Ventajas de fetch:</h3>
+                    <ul>
+                        <li>Promesas: Más fácil de manejar que XMLHttpRequest.</li>
+                        <li>Utiliza APIs más recientes y promueve el código limpio y legible.</li>
                     </ul>
                 </div>
 
@@ -67,6 +79,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="apifetch.js"></script>
 </body>
 
 </html>
