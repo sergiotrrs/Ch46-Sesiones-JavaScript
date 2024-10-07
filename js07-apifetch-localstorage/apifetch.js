@@ -128,9 +128,45 @@ const datosDelProductoUsandoAsyncYAwaitYTryCatch = async (url) => {
   console.log("He terminado con async y await");
 };
 
+/*
 datosDelProductoUsandoAsyncYAwaitYTryCatch(
   "https://gggggg.in/api/users?page=2"
-);
+);*/
+
+
+const mostrarProductos = ( products ) => {
+    console.table(products);
+}
+
+const mostrarCardId2 = ( cards ) => {
+    console.table( cards[1].products);
+}
+
+const solicitudHttp = async (url, fncManejoDatos ) => {
+    try {
+      const resolve = await fetch(url);
+      const info = await resolve.json();
+      fncManejoDatos( info );
+    } catch (exception) {
+      console.error("Ocurrió un problema", exception);
+    }
+    console.log("He terminado con async y await");
+  };
+
+/*
+Ejercicio:
+Dada la siguiente URL: https://fakestoreapi.com/products
+Mostrar en la consola con console.table la lista de productos.
+*/
+solicitudHttp( "https://fakestoreapi.com/products" , mostrarProductos);
+
+/*
+Ejercicio Opcional:
+Dada la siguiente URL:https://fakestoreapi.com/carts
+Mostrar en la consola con console.table la lista de productos del índice id:2
+*/
+solicitudHttp( "https://fakestoreapi.com/carts" , mostrarCardId2);
+
 /*
 JSON (JavaScript Object Notation) es un formato de texto ligero para el intercambio de datos. 
 Algunas de sus características incluyen:
