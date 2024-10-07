@@ -78,6 +78,21 @@ datosDelProductoRefactorizado("https://reqres.in/api/users?page=2"); // accdeder
 
 
 
+//---------------- manejar las promesas con async y await-------------
+/*
+ Async y Await facilita la escritura y lectura de código asíncrono.
+ Permite escribir código asíncrono de manera similar a cómo se escribiría
+ código síncrono.
+
+*/
+const datosDelProductoUsandoAsyncYAwait = async ( url ) =>{
+   const resolve = await fetch(url);
+   const products = await resolve.json();
+   console.table( products.data );
+   console.log("He terminado con async y await");
+}
+
+datosDelProductoUsandoAsyncYAwait("https://reqres.in/api/users?page=2");
 
 
 
