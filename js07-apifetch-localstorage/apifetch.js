@@ -84,6 +84,16 @@ datosDelProductoRefactorizado("https://reqres.in/api/users?page=2"); // accdeder
  Permite escribir código asíncrono de manera similar a cómo se escribiría
  código síncrono.
 
+ async:
+ La palabra clave async se utiliza para declarar una función asíncrona. 
+ Esto significa que esta función siempre retornará una promesa, 
+ y podemos usar await dentro de ella.
+
+ await:
+ La palabra clave await detiene la ejecución de la función asíncrona 
+ hasta que una promesa sea resuelta o rechazada. Solo puede ser 
+ utilizada dentro de funciones declaradas con async.
+
 */
 const datosDelProductoUsandoAsyncYAwait = async ( url ) =>{
    const resolve = await fetch(url);
@@ -94,10 +104,33 @@ const datosDelProductoUsandoAsyncYAwait = async ( url ) =>{
 
 datosDelProductoUsandoAsyncYAwait("https://reqres.in/api/users?page=2");
 
+/*
+    En JavaScript, try y catch son bloques utilizados para 
+    manejar errores. Permiten controlar el flujo de ejecución 
+    del código cuando ocurren excepciones, lo que ayuda a evitar 
+    que los errores detengan abruptamente el programa.
 
+    sintaxis:
+       try{
 
+       } catch( exception) {
 
+       }
+  */
+const datosDelProductoUsandoAsyncYAwaitYTryCatch = async (url) => {
+  try {
+    const resolve = await fetch(url);
+    const products = await resolve.json();
+    console.table(products.data);
+  } catch (exception) {
+    console.error("Ocurrió un problema", exception);
+  }
+  console.log("He terminado con async y await");
+};
 
+datosDelProductoUsandoAsyncYAwaitYTryCatch(
+  "https://gggggg.in/api/users?page=2"
+);
 /*
 JSON (JavaScript Object Notation) es un formato de texto ligero para el intercambio de datos. 
 Algunas de sus características incluyen:
