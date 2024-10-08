@@ -1,0 +1,25 @@
+[
+    {
+        "id":2598,
+        "name": "Lego Chef",
+        "price": 125.23,
+        "stock": 48,
+        "image": "https://randomuser.me/api/portraits/lego/8.jpg"
+    },
+    {
+        "id":3251,
+        "name": "Lego Conctrutor",
+        "price": 107.40,
+        "stock": 12,
+        "image": "https://randomuser.me/api/portraits/lego/7.jpg"
+    },
+    {
+        "id":58,
+        "name": "Lego Charro",
+        "price": 250.23,
+        "stock": 5,
+        "image": "https://randomuser.me/api/portraits/lego/6.jpg"
+       }
+
+
+]
