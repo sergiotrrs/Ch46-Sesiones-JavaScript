@@ -1,3 +1,4 @@
+import {saludo} from "./saludo.js"
 
 const register = document.forms["register-form"];
 
@@ -55,3 +56,6 @@ register.addEventListener( "submit" , ( event )=> {
     } 
 
 } );
+
+
+console.log(  saludo("Burrito") );
