@@ -37,6 +37,33 @@ class Mascota {
         this.#especie = newEspecie;
     }
 
+    #metodoEncapsulado() {
+
+    }
+
+    saluda( comida ){
+        return `Hola, soy ${this.name} y estoy comiendo ${comida.toUpperCase() }`;
+    }
+
 }
 
-export { Mascota };
+/**
+ * Herencia: mecanismo que permite a un objeto basarse en otro 
+ * objeto existente para heredar propiedades y métodos. 
+ * Esto permite la reutilización de código y la creación 
+ * de relaciones entre objetos, lo que facilita la 
+ * organización y la estructura del código.
+ * 
+ * Para heredar en la declaración de la clase se usa la palabra extends
+ */
+class MascotaReptil extends Mascota{
+
+    constructor(nombre, edad ){
+        //  Acceder al constructor de la super clase
+        super( nombre, edad, "reptil");
+    }
+
+}
+
+
+export { Mascota, MascotaReptil };

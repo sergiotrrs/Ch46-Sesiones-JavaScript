@@ -1,4 +1,6 @@
-import { Mascota } from "./mascota.js";
+// import { Mascota } from "./mascota.js";
+// import { MascotaReptil } from "./mascota.js";
+import { Mascota, MascotaReptil } from "./mascota.js";
 
 const jugarConMascotas = ()=>{
 
@@ -30,6 +32,13 @@ const jugarConMascotas = ()=>{
     tessa.especie = "canis lupus familiaris";
     console.log( tessa.especie); // canis lupus
     
+    console.log( tessa.saluda("croquetas") );
+    console.log( copitoAntonio.saluda("pollito y jamón del caro") );
+
+    // Crear el objeto Steve
+    const steve = new MascotaReptil("Steve", 7);
+    console.log( steve.saluda("Gusanitos") );
+
 }
 
 export { jugarConMascotas };
