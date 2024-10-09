@@ -27,7 +27,7 @@ const jugarConMascotas = ()=>{
     // Mostrar los atributos encapsulados
     console.log( tessa.especie); // undefined
     // console.log( tessa.#especie); // No se puede acceder a atributos encapsulados
-    tessa.especie = "canis lupus";
+    tessa.especie = "canis lupus familiaris";
     console.log( tessa.especie); // canis lupus
     
 }
