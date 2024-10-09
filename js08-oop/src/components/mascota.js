@@ -15,12 +15,12 @@
 class Mascota {
     
     // El método constructor nos ayuda a instanciar un objeto
-    constructor( nombreMascota ){
+    constructor( nombreMascota , edad ){
         this.name = nombreMascota;
+        this.edad = edad;
         console.log(this);
         
-        console.log("Tengo vida, ja, ja , ja")
-
+        console.log(`Soy ${this.name}, Tengo vida, ja, ja , ja, y tengo ${this.edad} años`);
     }
 
 }
