@@ -38,6 +38,7 @@ const jugarConMascotas = ()=>{
     // Crear el objeto Steve
     const steve = new MascotaReptil("Steve", 7);
     console.log( steve.saluda("Gusanitos") );
+    console.log( steve.cambiarPiel()  );
 
 }
 

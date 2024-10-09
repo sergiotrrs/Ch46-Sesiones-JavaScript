@@ -63,6 +63,10 @@ class MascotaReptil extends Mascota{
         super( nombre, edad, "reptil");
     }
 
+    cambiarPiel(){
+        return `soy ${this.name} y estoy cambiando de pielecita, no me veas`;
+    }
+
 }
 
 
