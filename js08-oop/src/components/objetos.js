@@ -4,7 +4,7 @@ const datosSteve = {
   edad: 7,
   colores: ["amarillo", "naranja"],
   cambioPiel: function () {
-    return `Me llamo Steve tengo 6 años y me toca cambiar de ropita`;
+    return `Me llamo ${this.nombre} tengo ${this.edad} años y me toca cambiar de ropita`;
   },
   alimento: {
     verduras: ["Zanahorias", "Lechuga"],
@@ -30,6 +30,13 @@ const mostrarEnConsolaASteve = () => {
   // Invocar la función cambioPiel de Steve
   console.log("Invocando la función: ", datosSteve.cambioPiel() );
   console.log("Invocando la función: ", datosSteve["cambioPiel"]() );
+  
+  // Cambiar el valor de un atributo
+  datosSteve.nombre = "Steve El Macho";
+  datosSteve["nombre"] = "Steve El Macho";
+  
+  console.log("Invocando la función: ", datosSteve.cambioPiel() );
+  
 };
 
 export { mostrarEnConsolaASteve };
