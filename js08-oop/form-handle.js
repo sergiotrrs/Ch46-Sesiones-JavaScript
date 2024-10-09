@@ -2,11 +2,13 @@ import {saludo} from "./src/components/saludo.js"
 import { isValid } from "./src/components/userValidations.js";
 import { postUser } from "./src/components/postUser.js";
 import { mostrarEnConsolaASteve } from "./src/components/objetos.js";
+import { jugarConMascotas } from "./src/components/mascotasCh46.js";
 
 
 const register = document.forms["register-form"];
 
-mostrarEnConsolaASteve();
+// mostrarEnConsolaASteve();
+jugarConMascotas();
 
 register.addEventListener( "submit" , ( event )=> {
     event.preventDefault();

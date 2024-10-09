@@ -10,7 +10,23 @@ const datosSteve = {
     verduras: ["Zanahorias", "Lechuga"],
     insectos: ["Gusanitos", "Hormigas"],
   },
+  generaSonido: function (){
+    return `griiii`;
+  }
 };
+
+const datosTibio = {
+    nombre: "Tibio",
+    tipo: "felino",
+    edad: 5,
+    colores: ["gris", "café"],
+    alimento: {
+        croquetas: ["seco/humedo"]
+    },
+    cambioPiel: function (){
+        return `Me llamno ${this.nombre} y no cambio de piel, pero si de pelaje`;
+    }
+}
 
 // Usar el objetos datosSteve
 const mostrarEnConsolaASteve = () => {
@@ -36,7 +52,7 @@ const mostrarEnConsolaASteve = () => {
   datosSteve["nombre"] = "Steve El Macho";
   
   console.log("Invocando la función: ", datosSteve.cambioPiel() );
-  
+
 };
 
 export { mostrarEnConsolaASteve };
