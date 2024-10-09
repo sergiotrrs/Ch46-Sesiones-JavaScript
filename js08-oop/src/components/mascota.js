@@ -14,13 +14,27 @@
 
 class Mascota {
     
+    // Atributo encapsulado
+    #especie;
+
     // El método constructor nos ayuda a instanciar un objeto
-    constructor( nombreMascota , edad ){
+    constructor( nombreMascota , edad, especie ){
         this.name = nombreMascota;
         this.edad = edad;
+        this.#especie = especie;
         console.log(this);
         
-        console.log(`Soy ${this.name}, Tengo vida, ja, ja , ja, y tengo ${this.edad} años`);
+        console.log(`Soy ${this.name}, Tengo vida, ja, ja , ja, y tengo ${this.edad} años, soy de la especie ${this.#especie}`);
+    }
+
+    // Leer y escribir a los atributos encapsulados
+    // métodos setters y getters
+    get especie(){
+        return this.#especie;
+    }
+
+    set especie( newEspecie ){
+        this.#especie = newEspecie;
     }
 
 }
