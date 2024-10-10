@@ -24,6 +24,7 @@
   "homepage": "https://github.com/sergiotrrs/Ch46-Sesiones-JavaScript#readme",
   "dependencies": {
     "axios": "^1.7.7",
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3"    
   }
 }
