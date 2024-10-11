@@ -14,5 +14,6 @@ const truncarTitulo = (titulo, maxCaracteres) => {
   return tituloRecortado;
 };
 
+console.log( truncarTitulo("Ya nos vamos al primer descanso", 10 ) );
 // export default truncarTitulo;
 export { truncarTitulo };
