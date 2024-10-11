@@ -28,3 +28,13 @@ test("Verificar la longitud final del titulo", ()=> {
 
 });
 
+test("Otros tipos de marchers", ()=>{
+    // toContain(): verifica si un array o string contiene un valor.
+    expect([1, 2, 3]).toContain(2);
+    // toEqual(): compara estructuras de datos (objetos, arrays).
+    expect({ name: 'Juan' }).toEqual({ name: 'Juan' });
+    // toThrow(): verifica si una función lanza un error.
+    expect(() => { throw new Error('Error') }).toThrow('Error');
+    // toBeCloseTo(): comapra números con decimales y verifica si están cerca uno del otro
+    expect( .1 +.2 ).toBeCloseTo(0.3); 
+});
