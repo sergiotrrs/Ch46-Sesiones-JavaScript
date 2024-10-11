@@ -3,7 +3,7 @@ const truncarTitulo = (titulo, maxCaracteres) => {
   let tituloRecortado;
   const decorador = "...";
 
-  if (titulo.length > maxCaracteres) {
+  if ( titulo!== null  &&  titulo.length > maxCaracteres) {
     tituloRecortado = titulo.slice(0, maxCaracteres - decorador.length);
     // Born to Make You Happy
     tituloRecortado += decorador;
