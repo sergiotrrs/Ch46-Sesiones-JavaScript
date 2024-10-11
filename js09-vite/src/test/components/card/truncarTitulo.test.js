@@ -21,3 +21,10 @@ test("Titulo vacios y nulls", ()=>{
     expect( truncarTitulo("", 20) ).toBe("");
     expect( truncarTitulo( null , 20) ).toBe(null);
 } );
+
+test("Verificar la longitud final del titulo", ()=> {
+    expect( truncarTitulo("I'm not a Girl", 5 ).length <= 5 ).toBe( true );
+    expect( truncarTitulo("Till the World Ends", 5 ).length <= 5 ).toBeTruthy();
+
+});
+
