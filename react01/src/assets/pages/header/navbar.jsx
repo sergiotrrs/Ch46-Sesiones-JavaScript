@@ -10,10 +10,11 @@ const estiloCourier = {
   color:"cyan"
 }
 
-
 const Navbar = () => {
 
-  const isArial = false;
+  const isArial = true;
+
+/*
   let estiloAAplicar;
 
   if( isArial ){
@@ -21,7 +22,7 @@ const Navbar = () => {
   } else {
     estiloAAplicar = estiloCourier;
   }
-
+*/
   return (
     <>
       <nav className="navbar" >
@@ -30,7 +31,7 @@ const Navbar = () => {
           <img src="/img/ninja-128px.png" alt="Logo Ninja" />
         </div>
         {/* Opciones del menú */}
-        <ul className="nav-links" style={ estiloAAplicar  } >
+        <ul className="nav-links" style={ isArial ? estiloArial : estiloCourier } >
           <li>
             <a>Home</a>
           </li>
