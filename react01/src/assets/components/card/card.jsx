@@ -7,14 +7,19 @@ properties = {
 
 export const Card = ( props ) => {
 
-  const counter = 1;
+  let counter = 1;
+
+  const incrementHandle = ()=>{
+    console.log("Estoy dentro de la función incremento")
+    console.log( ++counter );
+  }
 
   return (
     <div>
        <p>{props.title}</p>
        <p>Piezas<span>{counter}</span></p>
        <p>Número máx de piezas: <span>{props.stock}</span> </p>
-       <button>+</button>
+       <button onClick={ incrementHandle } >+</button>
        <button>-</button>
     </div>
   )
