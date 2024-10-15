@@ -1,4 +1,5 @@
 import "./App.css";
+import { Cards } from "./assets/pages/cards/cards";
 import { Footer } from "./assets/pages/footer/footer";
 import { Navbar } from "./assets/pages/header/navbar";
 
@@ -13,7 +14,7 @@ function App() {
   const myJSX = (
     <>
      <Navbar />
-
+      <Cards />
      <Footer />
 
     </>
