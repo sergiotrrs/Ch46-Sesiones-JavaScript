@@ -10,6 +10,12 @@ const estiloCourier = {
   color:"cyan"
 }
 
+// Suponer que se hace una petición fetch
+const myJson = '{"fontFamily":"Times New Roman", "color":"red"}';
+// Convertir JSON a Object
+const myObjStyle = JSON.parse( myJson );
+
+
 const Navbar = () => {
 
   const isArial = true;
@@ -31,7 +37,7 @@ const Navbar = () => {
           <img src="/img/ninja-128px.png" alt="Logo Ninja" />
         </div>
         {/* Opciones del menú */}
-        <ul className="nav-links" style={ isArial ? estiloArial : estiloCourier } >
+        <ul className="nav-links" style={ myObjStyle || estiloArial } >
           <li>
             <a>Home</a>
           </li>
