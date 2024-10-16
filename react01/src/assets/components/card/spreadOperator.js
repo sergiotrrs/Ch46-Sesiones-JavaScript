@@ -28,13 +28,9 @@ const edades = [ 13, 12,  56, 8, 23, 33];
 
 // Ordenar de mayor a menos
 console.log("desordenado", edades );
-edades.sort((a,b)=> {
-    if( a > b) return 1
-    else if ( a < b ) return -1
-    else 0
-}  );
+edades.sort((a,b)=>  a - b );
 console.log("ordenado", edades );
 
 // Seleccionar el último valor
-console.log("edad mayor:" , edades.pop() )
+console.log("edad mayor:" , edades.pop() ) // 56
 
