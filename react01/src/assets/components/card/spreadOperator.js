@@ -20,3 +20,21 @@ const numsB = [12,13,14];
 // const nums = numsA.concat( numsB );
 const nums = [ ...numsA, ...numsB] ;
 console.log( nums ); 
+
+// ===================================================
+// Obtener el valor Máximo del número del sig. array
+// edades = [ 13, 56, 8, 23, 33];
+const edades = [ 13, 12,  56, 8, 23, 33];
+
+// Ordenar de mayor a menos
+console.log("desordenado", edades );
+edades.sort((a,b)=> {
+    if( a > b) return 1
+    else if ( a < b ) return -1
+    else 0
+}  );
+console.log("ordenado", edades );
+
+// Seleccionar el último valor
+console.log("edad mayor:" , edades.pop() )
+
