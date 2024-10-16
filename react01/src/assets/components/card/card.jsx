@@ -29,14 +29,14 @@ export const Card = ( {title, stock} ) => {
   // const [carts, setCarts] = useState( [] );
 
   const handleIncrement = ()=>{
-    console.log("Valor antes de renderizar" , {counter})
-    setCounter(  counter + 1 ); 
+    // console.log("Valor antes de renderizar" , {counter})
+    if( counter < stock ) setCounter( counter + 1 ); 
     // setCarts( [ {newItem:"new"} ], ...carts  ) // spread operator
   }
 
   // Función que decremente el contador
   const handleDecrement = ()=>{
-
+    if( counter > 0) setCounter(  counter - 1 ); 
   }
 
   return (
