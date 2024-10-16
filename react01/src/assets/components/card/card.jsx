@@ -23,7 +23,7 @@
 
 import { useState } from "react";
 
-export const Card = ( props ) => {
+export const Card = ( {title, stock} ) => {
 
   const [counter, setCounter] = useState( 1 );
 
@@ -34,9 +34,9 @@ export const Card = ( props ) => {
 
   return (
     <div>
-       <p>{props.title}</p>
+       <p>{title}</p>
        <p>Piezas<span>{counter}</span></p>
-       <p>Número máx de piezas: <span>{props.stock}</span> </p>
+       <p>Número máx de piezas: <span>{stock}</span> </p>
        <button onClick={ incrementHandle } >+</button>
        <button>-</button>
     </div>
