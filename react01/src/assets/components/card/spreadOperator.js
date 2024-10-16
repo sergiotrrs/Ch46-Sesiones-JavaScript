@@ -48,3 +48,19 @@ console.log("nombre: ", liz.name );
 const lizbeth = { ...persona, name: "Lizbeth Diaz" };
 console.log( lizbeth ); // { name: 'Lizbeth Diaz', age: 22 }
 console.log("nombre: ", lizbeth.name ); // "Lizbeth Diaz"
+
+// Ejercicio
+const producto = { id: 1, nombre: "Camiseta", precio: 20, cantidad: 2 };
+// Actualizar el valor de cantidad con el valor de la sig. variable
+const nuevaCantidad = 100;
+
+/*
+producto["cantidad"] = nuevaCantidad;
+const temu = producto;
+console.log( temu );
+*/
+const temu = {...producto, cantidad: nuevaCantidad};
+console.log( temu );
+console.log( producto );
+
+

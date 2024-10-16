@@ -28,10 +28,15 @@ export const Card = ( {title, stock} ) => {
   const [counter, setCounter] = useState( 0 );
   // const [carts, setCarts] = useState( [] );
 
-  const incrementHandle = ()=>{
+  const handleIncrement = ()=>{
     console.log("Valor antes de renderizar" , {counter})
     setCounter(  counter + 1 ); 
     // setCarts( [ {newItem:"new"} ], ...carts  ) // spread operator
+  }
+
+  // Función que decremente el contador
+  const handleDecrement = ()=>{
+
   }
 
   return (
@@ -39,8 +44,8 @@ export const Card = ( {title, stock} ) => {
        <p>{title}</p>
        <p>Piezas<span>{counter}</span></p>
        <p>Número máx de piezas: <span>{stock}</span> </p>
-       <button onClick={ incrementHandle } >+</button>
-       <button>-</button>
+       <button onClick={ handleIncrement } >+</button>
+       <button onClick={ handleDecrement }>-</button>
     </div>
   )
 }
