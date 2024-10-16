@@ -37,3 +37,14 @@ console.log("edad mayor:" , edades.pop() ) // 56
 */
 console.log("Math.max",  Math.max( 3,6,88,12) );
 console.log("Mayor edad",  Math.max( ...edades  ) );
+
+// Uso de spred con objetos
+const persona = { name: "Liz", age: 22 };
+// const liz = { persona, city: "CDmx"  }; // { persona: { name: 'Liz', age: 22 }, city: 'CDmx' }
+// console.log("nombre: ",  liz.persona.name ); // Liz
+const liz = { ...persona, city: "CDmx"  }; //{  name: 'Liz', age: 22 , city: 'CDmx' }
+console.log("nombre: ", liz.name );
+
+const lizbeth = { ...persona, name: "Lizbeth Diaz" };
+console.log( lizbeth ); // { name: 'Lizbeth Diaz', age: 22 }
+console.log("nombre: ", lizbeth.name ); // "Lizbeth Diaz"
