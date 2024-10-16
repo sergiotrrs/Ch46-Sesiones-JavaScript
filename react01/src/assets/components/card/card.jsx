@@ -25,11 +25,13 @@ import { useState } from "react";
 
 export const Card = ( {title, stock} ) => {
 
-  const [counter, setCounter] = useState( 1 );
+  const [counter, setCounter] = useState( 0 );
+  // const [carts, setCarts] = useState( [] );
 
   const incrementHandle = ()=>{
-    console.log("Estoy dentro de la función incremento")
-    console.log( ++counter );
+    console.log("Valor antes de renderizar" , {counter})
+    setCounter(  counter + 1 ); 
+    // setCarts( [ {newItem:"new"} ], ...carts  ) // spread operator
   }
 
   return (

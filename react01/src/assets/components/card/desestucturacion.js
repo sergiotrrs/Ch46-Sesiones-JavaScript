@@ -66,3 +66,21 @@ console.log( `
   </div>
 </div>
     ` );
+
+
+const useStatePersonalizado = ( valorInical ) =>{
+
+    // Otras instrucciones
+    let valorActual = valorInical;
+
+    const setValue = ( newValue ) =>{
+        // Renderizar componente
+    }
+
+    return [ valorActual, setValue ];s
+
+}
+
+const [ state, setState ] =  useStatePersonalizado( 5 );
+console.log( state ); // 5
+setState(10);
