@@ -13,6 +13,7 @@ function App() {
   */
   const myJSX = (
     <>
+     
      <Navbar />
       <Cards />
      <Footer />
