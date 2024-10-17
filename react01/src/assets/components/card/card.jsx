@@ -51,17 +51,23 @@ export const Card = ({ title, stock }) => {
         },
       }}
     >
-     <Typography variant="h5" component={"p"}>
-       {title}
-     </Typography>      
-      <p>
-        Piezas<span>{counter}</span>
-      </p>
-      <p>
-        Número máx de piezas: <span>{stock}</span>
-      </p>
+      <Typography variant="h5" component={"p"}>
+        {title}
+      </Typography>
+      <Typography variant="h5" component={"p"}>
+        Piezas
+        <Typography variant="h2" component={"p"}>
+          {counter}
+        </Typography>
+      </Typography>
+      <Typography variant="h6" component={"p"}>
+        Número máx de piezas:
+        <Typography variant="h6" component={"p"}>
+          {stock}
+        </Typography>
+      </Typography>
       <Button
-        disabled = { counter<= 0 }
+        disabled={counter <= 0}
         variant="contained"
         sx={{
           mx: 1,
@@ -75,9 +81,9 @@ export const Card = ({ title, stock }) => {
         -
       </Button>
       <Button
-      disabled = { counter>= stock }
-        variant="contained"        
-        sx={{          
+        disabled={counter >= stock}
+        variant="contained"
+        sx={{
           mx: 1,
           color: "black",
           bgcolor: "whitesmoke",
