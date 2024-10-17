@@ -20,7 +20,7 @@
     - El valor del estado se mantiene entre renderizados del componente
 */
 
-import { Box } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { useState } from "react";
 
 export const Card = ({ title, stock }) => {
@@ -51,15 +51,43 @@ export const Card = ({ title, stock }) => {
         },
       }}
     >
-      <p>{title}</p>
+     <Typography variant="h5" component={"p"}>
+       {title}
+     </Typography>      
       <p>
         Piezas<span>{counter}</span>
       </p>
       <p>
-        Número máx de piezas: <span>{stock}</span>{" "}
+        Número máx de piezas: <span>{stock}</span>
       </p>
-      <button onClick={handleIncrement}>+</button>
-      <button onClick={handleDecrement}>-</button>
+      <Button
+        disabled = { counter<= 0 }
+        variant="contained"
+        sx={{
+          mx: 1,
+          color: "black",
+          bgcolor: "whitesmoke",
+          borderRadius: 2,
+          "&:hover": { bgcolor: "orange" },
+        }}
+        onClick={handleDecrement}
+      >
+        -
+      </Button>
+      <Button
+      disabled = { counter>= stock }
+        variant="contained"        
+        sx={{          
+          mx: 1,
+          color: "black",
+          bgcolor: "whitesmoke",
+          borderRadius: 2,
+          "&:hover": { bgcolor: "orange" },
+        }}
+        onClick={handleIncrement}
+      >
+        +
+      </Button>
     </Box>
   );
 };
