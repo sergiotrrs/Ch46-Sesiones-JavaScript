@@ -1,4 +1,3 @@
-
 /*
  Un componente en React se renderiza baja ciertas condiciones:
 
@@ -21,33 +20,48 @@
     - El valor del estado se mantiene entre renderizados del componente
 */
 
+import { Box } from "@mui/material";
 import { useState } from "react";
 
-export const Card = ( {title, stock} ) => {
-
-  const [counter, setCounter] = useState( 0 );
+export const Card = ({ title, stock }) => {
+  const [counter, setCounter] = useState(0);
   // const [carts, setCarts] = useState( [] );
 
-  const handleIncrement = ()=>{
+  const handleIncrement = () => {
     // console.log("Valor antes de renderizar" , {counter})
-    if( counter < stock ) setCounter( counter + 1 ); 
+    if (counter < stock) setCounter(counter + 1);
     // setCarts( [ {newItem:"new"} ], ...carts  ) // spread operator
-  }
+  };
 
   // Función que decremente el contador
-  const handleDecrement = ()=>{
-    if( counter > 0) setCounter(  counter - 1 ); 
-  }
+  const handleDecrement = () => {
+    if (counter > 0) setCounter(counter - 1);
+  };
 
   return (
-    <div>
-       <p>{title}</p>
-       <p>Piezas<span>{counter}</span></p>
-       <p>Número máx de piezas: <span>{stock}</span> </p>
-       <button onClick={ handleIncrement } >+</button>
-       <button onClick={ handleDecrement }>-</button>
-    </div>
-  )
-}
+    <Box
+      textAlign="center"
+      sx={{
+        color: "whitesmoke",
+        bgcolor: "#333",
+        borderRadius: 2,
+        p: 2,
+        "&:hover": {
+          bgcolor: "primary.dark",
+        },
+      }}
+    >
+      <p>{title}</p>
+      <p>
+        Piezas<span>{counter}</span>
+      </p>
+      <p>
+        Número máx de piezas: <span>{stock}</span>{" "}
+      </p>
+      <button onClick={handleIncrement}>+</button>
+      <button onClick={handleDecrement}>-</button>
+    </Box>
+  );
+};
 
-// export { Card } 
+// export { Card }

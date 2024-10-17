@@ -6,7 +6,7 @@ export const Cards = () => {
   return (
     <>
       <Container maxWidth="md" sx={ {my:3} }>
-        <Grid container>
+        <Grid spacing={2} container>
           <Grid size={ {xs:6 , md:4} }>
             <Card title="Shampoo" stock={50} />
           </Grid>
