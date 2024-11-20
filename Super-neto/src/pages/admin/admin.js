@@ -7,7 +7,7 @@ import { domainName } from '../../components/api/domainName.js';
 
 document.querySelector("#navbar-app").innerHTML= navbarApp();
 const spinnerWrapper = document.querySelector(".spinner-wrapper");
-const url = `${domainName()}/api/v2/users`;
+const url = `${domainName()}/api/v1/customers`;
 const logout = document.querySelector("#logout");
 
 logout.addEventListener( "click"  , ( event )=>{ 

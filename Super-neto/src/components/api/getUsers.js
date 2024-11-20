@@ -1,6 +1,6 @@
 import { domainName } from "./domainName";
 
-const url = `${domainName()}/api/v1/users`;
+const url = `${domainName()}/api/v1/customers`;
 
 const getUsers = async (url) => {
   const response = await fetch(url);
