@@ -1,7 +1,7 @@
 import { domainName } from "./domainName";
 
 const postRegisterForm = async ( registerFormData ) => {
-  const url = `${domainName()}/api/v1/users`;
+  const url = `${domainName()}/api/v1/customers`;
 
   const options = {
     method: "POST", // DELETE, PUT, POST, GET

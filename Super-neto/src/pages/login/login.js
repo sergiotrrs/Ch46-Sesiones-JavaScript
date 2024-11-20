@@ -26,7 +26,7 @@ loginForm.addEventListener("submit", async (event) => {
       const user = await postLogin(formData);
       const userSesion = {
         user,
-        isAdmin: user.roles.some((role) => role.name === "ADMIN"),
+        isAdmin: user.roles.some((role) => role.name.toUpperCase() === "ADMIN"),
         expiration: 0,
       };
       localStorage.setItem("userSesion", JSON.stringify(userSesion));
