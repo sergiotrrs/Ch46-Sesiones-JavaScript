@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header id="navbar-app"> </header>
+
+    <!-- main -->
+    <main id="app" class="container my-4">
+        <div class="row justify-content-center">
+            <!-- Decorativo -->
+            <div class="col-md-6 d-none d-md-block">
+                <img class="img-fluid rounded-3" src="/img/logo.png" alt="logo de la empresa">
+            </div>
+            <!-- formulario de contacto -->
+            <div class="col-md-6">
+                <form id="contactForm">
+                    <div class="rounded-box"> 
+
+                        <div class="mx-3 mb-3">
+                            <i class="bi bi-person-hearts"></i>
+                            <label for="firstName" class="form-label">Nombre</label>
+                            <div class="position-relative">
+                                <input type="text" class="form-control form-control-with-icon" id="firstName"
+                                    placeholder="Escribe tu nombre">
+                            </div>
+                        </div>
+
+                        <div class="mx-3 mb-3">
+                            <i class="bi bi-heart-arrow"></i>
+                            <label for="lastName" class="form-label">Apellido</label>
+                            <div class="position-relative">
+                                <input type="text" class="form-control form-control-with-icon" id="lastName"
+                                    placeholder="Escribe tu apellido">
+                            </div>
+                        </div>
+
+                        <div class="mx-3 mb-3">
+                            <i class="bi bi-envelope-paper-heart-fill"></i>
+                            <label for="email" class="form-label">Email</label>
+                            <div class="position-relative">
+                                <input type="email" class="form-control form-control-with-icon" id="email"
+                                    placeholder="eva01@email.com">
+                            </div>
+                        </div>
+
+                        <div class="mx-3 mb-3">
+                            <i class="bi bi-arrow-through-heart-fill"></i>
+                            <label for="password" class="form-label">Password</label>
+                            <div class="position-relative">
+                                <input type="password" class="form-control form-control-with-icon" id="password"
+                                    placeholder="*******">
+                            </div>
+                        </div>
+
+                        <div class="mx-3 mb-3">
+                            <i class="bi bi-calendar-heart-fill"></i>
+                            <label for="birthdate" class="form-label">Birthdate</label>
+                            <div class="position-relative">
+                                <input type="date" class="form-control form-control-with-icon" id="birthdate">
+                            </div>
+                        </div>
+    
+    
+                    </div>
+
+                    <div class="mx-3 contenedor-terminos-boton">                       
+                        <input id="terminos-condiciones" type="checkbox">
+                        <label for="terminos-condiciones"> Acepto términos y condiciones </label>
+                        <button type="submit" class="mx-3 btn btn-warning">Registrar</button>                        
+                    </div>
+
+                    <!-- Mensaje de alerta -->
+                    <div id="error-message" class="alert alert-warning my-2" role="alert" style="display: none;">
+                    </div>
+
+                    <!-- Mensaje de error -->
+                    <div id="post-error-message" class="alert alert-danger my-2" role="alert" style="display: none;">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer id="footer-app"></footer>
+
+    <script type="module" src="./register.js"></script>
+</body>
+
+</html>

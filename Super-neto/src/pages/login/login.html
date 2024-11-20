@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header id="navbar-app"> </header>
+
+    <!-- main -->
+         <!-- main -->
+    <main id="app" class="container my-4">
+        <div class="row justify-content-center">
+            <!-- Decorativo -->
+            <div class="col-md-6 d-none d-md-block">
+                <img class="img-fluid rounded-3" src="/img/logo.png" alt="logo de la empresa">
+            </div>
+            <!-- formulario de login -->
+            <div class="col-md-6">
+                <form id="loginForm">
+                    <div class="rounded-box"> <!-- Caja contenedora con borde redondeado -->
+                        <div class="mx-3 mb-3">
+                            <i class="bi bi-envelope-paper-heart-fill"></i>
+                            <label for="email" class="form-label">Email</label>
+                            <div class="position-relative">
+                                <input type="email" class="form-control form-control-with-icon" id="email"
+                                    placeholder="eva01@email.com">
+                            </div>
+                        </div>
+                        <div class="mx-3 mb-3">
+                            <i class="bi bi-arrow-through-heart-fill"></i>
+                            <label for="password" class="form-label">Password</label>
+                            <div class="position-relative">
+                                <input type="password" class="form-control form-control-with-icon" id="password"
+                                    placeholder="******">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mx-3 contenedor-terminos-boton">                        
+                        <button type="submit" class="btn btn-warning">Login</button>
+                    </div>
+
+                    <!-- Mensaje de alerta -->
+                    <div id="error-message" class="alert alert-warning my-2" role="alert" style="display: none;">
+
+                    </div>
+
+                    <!-- Mensaje de error -->
+                    <div id="post-error-message" class="alert alert-danger my-2" role="alert" style="display: none;">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- footer -->
+    <footer id="footer-app"></footer>
+
+    <script type="module" src="./login.js"></script>
+</body>
+
+</html>
